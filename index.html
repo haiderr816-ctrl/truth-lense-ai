@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truth Lens | AI Fact Checker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Truth Lens</h1>
-        <p>Your AI Shield against Misinformation</p>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truth Lens — AI Misinformation Detector</title>
 
-    <main>
-        <section class="input-area">
-            <textarea placeholder="Paste news headline or text here..."></textarea>
-            <button id="analyze-btn">Analyze Truth</button>
-            
-        </section>
-    </main>
-    <script src="script.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Your stylesheet — always in <head> -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="logo-mark">⬡</div>
+    <span class="site-name">Truth Lens</span>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <main class="main-container">
+
+    <section class="hero">
+      <h1 class="hero-title">Is it <em>true</em>?</h1>
+      <p class="hero-subtitle">
+        Paste any news headline. Our AI analyzes it for truth,
+        bias, and misinformation in seconds.
+      </p>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         INPUT CARD
+    ════════════════════════════════════════ -->
+    <div class="input-card">
+      <label class="input-label" for="headline-input">
+        Enter a headline or claim
+      </label>
+
+      <!-- ID: headline-input ← script.js reads this -->
+      <textarea
+        id="headline-input"
+        class="headline-textarea"
+        placeholder="e.g. Scientists discover water on Mars…"
+        rows="3"
+      ></textarea>
+
+      <!-- ID: analyze-btn ← script.js attaches click event here -->
+      <button id="analyze-btn" class="analyze-btn">
+        <span class="btn-icon">◈</span>
+        <span class="btn-text">Analyze Truth</span>
+      </button>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         RESULT SECTION
+         ID: result-section ← shown/hidden by script.js
+    ════════════════════════════════════════ -->
+    <section id="result-section" class="result-section" style="display:none;">
+
+      <!-- ID: ai-response ← script.js writes result HTML here -->
+      <div id="ai-response"></div>
+
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <p>Truth Lens · Powered by Gemini 2.0 Flash · Built by a self-taught developer</p>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPT — must be at the END of <body>
+       so the HTML elements above exist before
+       script.js tries to find them.
+  ════════════════════════════════════════════ -->
+  <script src="script.js"></script>
+
 </body>
 </html>
