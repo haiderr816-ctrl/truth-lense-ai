@@ -48,8 +48,8 @@
     <section class="hero" aria-label="Introduction">
       <p class="hero-eyebrow">AI-Powered Fact Checker</p>
       <h1 class="hero-title">
-        Fight Misinformation<br />
-        with <span>Truth Lens</span>
+        Detect <span class="typing-word" id="typing-target">Fake News</span><span class="typing-cursor"></span><br />
+        with Truth Lens
       </h1>
       <p class="hero-subtitle">
         Paste any news headline or claim. Our AI analyzes it for
@@ -92,7 +92,11 @@
       </button>
 
     </section>
-
+<!-- HISTORY SECTION -->
+    <section id="history-section" aria-label="Recent analyses" style="display:none;">
+      <p class="history-title">Recent Searches</p>
+      <div id="history-list"></div>
+    </section>
     <!-- RESULT SECTION
          id="result-section" ← shown/hidden by script.js
          aria-live="polite" ← announces result to screen readers
@@ -109,6 +113,96 @@
     </section>
 
   </main>
+
+  <!-- HOW IT WORKS -->
+    <section class="how-section reveal">
+      <p class="section-eyebrow">Simple Process</p>
+      <h2 class="section-title">How Truth Lens Works</h2>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon">📋</div>
+          <h3 class="step-title">Paste a Headline</h3>
+          <p class="step-desc">Copy any news headline, viral claim, or social media post and paste it into the analyzer.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon">🧠</div>
+          <h3 class="step-title">AI Analyzes It</h3>
+          <p class="step-desc">Our AI cross-references the claim against journalism standards from Reuters, AP, and BBC.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon">📊</div>
+          <h3 class="step-title">Get Full Breakdown</h3>
+          <p class="step-desc">See the Truth Meter, bias report, red flags, verdict, and how to verify — in seconds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section">
+      <p class="section-eyebrow">What We Detect</p>
+      <h2 class="section-title">Everything Hidden in a Headline</h2>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">⚖️</div>
+          <h3 class="feature-title">Truth Meter</h3>
+          <p class="feature-desc">Visual gradient bar from red to green shows truth level at a glance before you read a word.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎯</div>
+          <h3 class="feature-title">Bias Detection</h3>
+          <p class="feature-desc">Identifies political lean, emotional language, and framing tricks used to manipulate readers.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🚩</div>
+          <h3 class="feature-title">Red Flag Alerts</h3>
+          <p class="feature-desc">Flags clickbait phrasing, missing sources, sensational language, and unverified claims.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎭</div>
+          <h3 class="feature-title">Tone Analysis</h3>
+          <p class="feature-desc">Detects if the tone is Neutral, Alarmist, Sensational, Misleading, or Objective.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">💡</div>
+          <h3 class="feature-title">Key Fact</h3>
+          <p class="feature-desc">Extracts the single most important fact a reader needs to know about the claim.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">Verify Sources</h3>
+          <p class="feature-desc">Gives you a specific, actionable tip to verify the claim yourself using trusted databases.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-section reveal">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="10000">0</span>
+          <span class="stat-plus">+</span>
+          <p class="stat-label">Headlines Analyzed</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-plus"></span>
+          <p class="stat-label">Bias Types Detected</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-plus">%</span>
+          <p class="stat-label">Free Forever</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <span class="stat-plus">s</span>
+          <p class="stat-label">Average Analysis Time</p>
+        </div>
+      </div>
+    </section>
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
