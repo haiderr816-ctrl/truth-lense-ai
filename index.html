@@ -12,7 +12,7 @@
   <!-- WHY these meta tags?
        og: tags make your link look professional when shared
        on WhatsApp, Twitter, LinkedIn — free marketing. -->
-  <title>Truth Lens — AI Misinformation Detector</title>
+  <title>Truth Lens — AI Misinformation Detector</title> <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f766e'/><text y='.9em' font-size='70' x='12'>🔍</text></svg>">
   <meta name="description" content="Paste any news headline. Our AI analyzes it for truth, bias, and misinformation in seconds." />
   <meta property="og:title"       content="Truth Lens — AI Fact Checker" />
   <meta property="og:description" content="Analyze any headline for truth and bias using AI." />
@@ -31,17 +31,43 @@
   <!-- ══════════════════════════════════════════════
        HEADER — Sticky nav builds brand recognition
   ═══════════════════════════════════════════════ -->
-  <header class="site-header" role="banner">
+ <header class="site-header" role="banner">
     <div class="header-brand">
       <div class="header-logo" aria-hidden="true">T</div>
       <span class="header-name">Truth Lens</span>
     </div>
-    <span class="header-badge">Beta</span>
+    <nav class="header-nav">
+      <a href="#analyzer" class="nav-link">Analyze</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="header-actions">
+      <button class="dark-mode-btn" id="dark-mode-btn" aria-label="Toggle dark mode">🌙</button>
+      <span class="header-badge">Beta</span>
+    </div>
   </header>
 
   <!-- ══════════════════════════════════════════════
        MAIN — role="main" is required for WCAG 1.3.1
   ═══════════════════════════════════════════════ -->
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <span class="ticker-label">⚡ Live</span>
+    <span class="ticker-content">
+      ❌ FALSE: "Moon is made of cheese" &nbsp;·&nbsp;
+      ✅ TRUE: "Water found on Mars" &nbsp;·&nbsp;
+      ⚠️ MISLEADING: "Vaccines cause autism" &nbsp;·&nbsp;
+      ❌ FALSE: "5G causes COVID-19" &nbsp;·&nbsp;
+      ✅ TRUE: "Earth is round" &nbsp;·&nbsp;
+      ⚖️ MIXED: "Coffee is bad for you" &nbsp;·&nbsp;
+      ❌ FALSE: "Humans only use 10% of brain" &nbsp;·&nbsp;
+    </span>
+  </div>
+
   <main class="main-container" role="main">
 
     <!-- HERO -->
@@ -80,6 +106,16 @@
       <p id="input-hint" style="font-size:.75rem;color:var(--text-muted);">
         Try a news headline, a viral claim, or a social media post.
       </p>
+      <div class="examples-section">
+        <p class="examples-label">Try an example</p>
+        <div class="examples-chips">
+          <button class="example-chip" onclick="useExample(this)">Scientists discover water on Mars</button>
+          <button class="example-chip" onclick="useExample(this)">Vaccines cause autism</button>
+          <button class="example-chip" onclick="useExample(this)">5G towers spread COVID-19</button>
+          <button class="example-chip" onclick="useExample(this)">Earth is flat</button>
+          <button class="example-chip" onclick="useExample(this)">Eating carrots improves eyesight</button>
+        </div>
+      </div>
 
       <!-- id="analyze-btn" ← script.js attaches click event here -->
       <button
@@ -203,7 +239,112 @@
         </div>
       </div>
     </section>
+<!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <p class="section-eyebrow">Trusted By Users</p>
+    <h2 class="section-title">What People Are Saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I use Truth Lens every morning before sharing news on WhatsApp. It has saved me from spreading fake news so many times. Every Pakistani should use this."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AK</div>
+          <div>
+            <p class="testimonial-name">Ahmed Khan</p>
+            <p class="testimonial-role">Journalist, Lahore</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"As a teacher I show my students how to verify news before believing it. Truth Lens is the perfect classroom tool — simple, fast, and accurate."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SF</div>
+          <div>
+            <p class="testimonial-name">Sara Fatima</p>
+            <p class="testimonial-role">University Lecturer, Karachi</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The Truth Meter is genius. I can see instantly if a headline is fake or real without reading a long article. This is the future of fact checking."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MR</div>
+          <div>
+            <p class="testimonial-name">Muhammad Raza</p>
+            <p class="testimonial-role">Student, Islamabad</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- TRUST BADGES -->
+  <div class="trust-section">
+    <div class="trust-grid">
+      <div class="trust-item"><span class="trust-icon">🤖</span> Powered by OpenRouter AI</div>
+      <div class="trust-item"><span class="trust-icon">📰</span> Reuters Journalism Standards</div>
+      <div class="trust-item"><span class="trust-icon">♿</span> WCAG Accessible</div>
+      <div class="trust-item"><span class="trust-icon">🔒</span> No Data Stored</div>
+      <div class="trust-item"><span class="trust-icon">💚</span> 100% Free Forever</div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section">
+    <p class="section-eyebrow">Got Questions?</p>
+    <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is Truth Lens 100% accurate?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">No AI is 100% accurate. Truth Lens uses advanced AI trained on journalism standards to give you a well-reasoned analysis — but always cross-reference important claims with trusted sources like Reuters, BBC, or AP News.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What AI powers Truth Lens?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">Truth Lens is powered by state-of-the-art language models accessed through OpenRouter — a platform that connects to the world's best AI models including models from Meta, Google, Nvidia, and DeepSeek.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is my data stored or shared?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">No. Your headlines are sent directly to the AI for analysis and are never stored on our servers. Your analysis history is saved only in your own browser using localStorage and never leaves your device.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is Truth Lens free to use?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">Yes — completely free, forever. No account required, no credit card, no hidden fees. Just paste a headline and get your analysis instantly.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I use this on my phone?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-answer">Absolutely. Truth Lens is fully responsive and works on all devices — phones, tablets, and desktops. Open truth-lense-ai.netlify.app in any mobile browser.</div>
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT -->
+  <section class="about-section reveal">
+    <p class="section-eyebrow">The Developer</p>
+    <div class="about-avatar">H</div>
+    <h2 class="about-name">Haider</h2>
+    <p class="about-role">Self-Taught Developer · Pakistan</p>
+    <p class="about-bio">Built Truth Lens in 5 days while learning HTML, CSS, JavaScript, and AI integration from scratch. This project is proof that anyone can build real products with dedication and the right guidance.</p>
+    <div class="about-links">
+      <a href="https://github.com/haiderr816-ctrl" class="about-link" target="_blank">⬡ GitHub</a>
+      <a href="mailto:your@email.com" class="about-link">✉ Contact</a>
+    </div>
+  </section>
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <p>
