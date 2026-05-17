@@ -1403,3 +1403,31 @@ body.dark .step-card {
 body.dark .feature-card {
   background: var(--bg-input);
 }
+/* ── TRUST BADGES ──────────────────────────────────────────── */
+.trust-section {
+  padding: var(--space-lg) var(--space-md);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+  width: 100%;
+}
+
+.trust-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
